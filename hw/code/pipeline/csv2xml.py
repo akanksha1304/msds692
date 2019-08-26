@@ -20,9 +20,9 @@ def csv2xml(data):
 	for i in range(1, len(sentences)):
 		row = sentences[i].split(',')
 		print('\t\t<record>')
-		row_str = '<' + header[0].replace(' ','_') + '>' + row[0].replace(' ','_') + '</' + header[0].replace(' ','_') + '>'
+		row_str = '<' + header[0].replace(' ','_') + '>' + row[0] + '</' + header[0].replace(' ','_') + '>'
 		for j in range(1, len(row)):
-			row_str = row_str + '<' + header[j].replace(' ','_') + '>' + row[j].replace(' ','_') + '</' + header[j].replace(' ','_') + '>'
+			row_str = row_str + '<' + header[j].replace(' ','_') + '>' + row[j] + '</' + header[j].replace(' ','_') + '>'
 		print('\t\t\t', row_str)
 		print('\t\t</record>')
 	print('\t</data>')
